@@ -99,4 +99,12 @@ const desktopOptions: {
     title: 'Kids',
     slug: '',
   },
+  {
+    title: 'Up To 50% Off',
+    slug: '',
+  },
+  {
+    title: 'Collections',
+    slug: '',
+  },
 ]
