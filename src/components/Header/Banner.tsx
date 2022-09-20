@@ -6,8 +6,8 @@ interface BannerProps {}
 
 export const Banner: React.FC<BannerProps> = () => {
   return (
-    <div className="w-full bg-base-200 hidden md:block">
-      <div className="w-full max-w-screen-xl mx-auto px-4 py-1 flex items-center justify-between">
+    <div className="hidden w-full bg-base-200 md:block">
+      <div className="flex items-center justify-between w-full max-w-screen-xl px-4 py-1 mx-auto">
         <div className="flex items-center gap-3">
           <Link href="https://www.nike.com/gb/jordan">
             <a className="btn btn-ghost">
@@ -28,7 +28,7 @@ export const Banner: React.FC<BannerProps> = () => {
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+              className="p-2 shadow dropdown-content menu bg-base-100 rounded-box w-52"
             >
               {helpOptions.map((Option) => (
                 <li key={Option.slug}>
