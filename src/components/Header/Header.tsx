@@ -6,6 +6,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 
 import { Banner } from './Banner'
 import { FiHeart } from 'react-icons/fi'
+import { SubBanner } from './SubBanner'
 
 interface HeaderProps {}
 
@@ -21,7 +22,7 @@ export const Header: React.FC<HeaderProps> = () => {
         </Link>
 
         {/* Desktop options */}
-        <div className="items-center hidden gap-3 md:flex">
+        <div className="items-center hidden gap-3 xl:flex">
           {desktopOptions.map((Option) => (
             <Link href={`/${Option.slug}`} key={Option.title}>
               <a className="btn btn-ghost">{Option.title}</a>
@@ -30,7 +31,7 @@ export const Header: React.FC<HeaderProps> = () => {
         </div>
 
         {/* Desktop search */}
-        <div className="hidden gap-2 md:flex">
+        <div className="hidden gap-2 xl:flex">
           <div className="form-control">
             <div className="input-group">
               <input
@@ -56,7 +57,7 @@ export const Header: React.FC<HeaderProps> = () => {
         </div>
 
         {/* Mobile view */}
-        <div className="flex items-center gap-1 md:hidden">
+        <div className="flex items-center gap-1 xl:hidden">
           <Link href="/">
             <a className="btn btn-ghost" aria-label="Cart">
               <AiOutlineShopping className="text-2xl" />
@@ -73,6 +74,7 @@ export const Header: React.FC<HeaderProps> = () => {
           </label>
         </div>
       </nav>
+      <SubBanner />
     </header>
   )
 }
